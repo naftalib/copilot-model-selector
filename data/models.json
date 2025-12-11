@@ -1,0 +1,78 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2025-12-10",
+  "categories": [
+    {
+      "category": "Speed",
+      "models": ["GPT-5 Mini", "Claude Haiku 4.5", "xAI Grok Code Fast"],
+      "examples": [
+        "JSON parsers",
+        "typed API utilities",
+        "simple form components"
+      ]
+    },
+    {
+      "category": "Code Generation",
+      "models": ["GPT-5.1 Codex Max", "GPT-5.1 Codex", "GPT-5 Codex"],
+      "examples": [
+        "Refactor controllers to services",
+        "add strict typing & validation",
+        "convert class components to hooks"
+      ]
+    },
+    {
+      "category": "Architectural Reasoning",
+      "models": ["Claude Opus 4.5", "GPT-5.1"],
+      "examples": [
+        "Trace route→controller→service flows",
+        "map service dependencies",
+        "analyze state management"
+      ]
+    },
+    {
+      "category": "Long-Context / Big File Analysis",
+      "models": ["Gemini 3 Pro", "Claude Sonnet 4.5", "Claude Opus 4.5"],
+      "examples": [
+        "Analyze large services",
+        "scan repos for performance issues",
+        "correlate log patterns"
+      ]
+    },
+    {
+      "category": "Balanced Daily Use",
+      "models": ["Claude Sonnet 4.5", "GPT-5.1"],
+      "examples": [
+        "PR reviews with suggestions",
+        "bug explanations & fixes",
+        "documentation"
+      ]
+    },
+    {
+      "category": "Multi-step Debugging",
+      "models": ["Claude Opus 4.5", "GPT-5.1", "Gemini 3 Pro"],
+      "examples": [
+        "Multi-step debugging",
+        "repo-level architecture mapping",
+        "production log correlation"
+      ]
+    },
+    {
+      "category": "Repo Workflows",
+      "models": ["Claude Opus 4.5", "GPT-5.1", "Gemini 3 Pro"],
+      "examples": [
+        "Map routes→controllers→services",
+        "detect blocking calls",
+        "find circular dependencies"
+      ]
+    },
+    {
+      "category": "Debugging Production",
+      "models": ["Claude Opus 4.5", "GPT-5.1", "Gemini 3 Pro"],
+      "examples": [
+        "Correlate repo + logs to failures",
+        "identify failing services",
+        "trace cascading failures"
+      ]
+    }
+  ]
+}

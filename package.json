@@ -1,0 +1,93 @@
+{
+  "name": "copilot-model-selector",
+  "displayName": "Copilot Model Selector",
+  "description": "AI Model selector for different coding tasks with recommendations",
+  "version": "0.2.0",
+  "publisher": "your-publisher-name",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/copilot-model-selector"
+  },
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "ai-model-selector",
+          "title": "AI Model Selector",
+          "icon": "resources/icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "ai-model-selector": [
+        {
+          "id": "modelCategories",
+          "name": "Model Categories"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "copilot-model-selector.selectModel",
+        "title": "Select AI Model for Task"
+      },
+      {
+        "command": "copilot-model-selector.refreshCategories",
+        "title": "Refresh",
+        "icon": "$(refresh)"
+      },
+      {
+        "command": "copilot-model-selector.selectCategory",
+        "title": "View Model Details"
+      }
+    ],
+    "menus": {
+      "view/title": [
+        {
+          "command": "copilot-model-selector.refreshCategories",
+          "when": "view == modelCategories",
+          "group": "navigation"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "AI Model Selector",
+      "properties": {
+        "aiModelSelector.dataSourceUrl": {
+          "type": "string",
+          "default": "https://raw.githubusercontent.com/your-username/copilot-model-selector-data/main/models.json",
+          "description": "URL for remote model data updates"
+        },
+        "aiModelSelector.autoUpdate": {
+          "type": "boolean",
+          "default": true,
+          "description": "Automatically check for model data updates"
+        },
+        "aiModelSelector.updateInterval": {
+          "type": "number",
+          "default": 24,
+          "description": "Hours between automatic update checks"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile"
+  },
+  "devDependencies": {
+    "@types/node": "^16.x",
+    "@types/vscode": "^1.60.0",
+    "typescript": "^5.0.0"
+  }
+}
